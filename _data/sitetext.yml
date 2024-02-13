@@ -11,8 +11,8 @@
 # -----------------
 en: &DEFAULT_EN
   header:
-    title: Welcome to our Studio!
-    text: It's Nice To Meet You
+    title: Welcome to my Portfolio!
+    text: IKBAL GUNDOGMUS
     button: Tell Me More
     buttonlink: "#services"
 
@@ -39,7 +39,7 @@ en: &DEFAULT_EN
   about:
     title: "About Me"
     text: ""
-    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
+    body: "I'm an innovative game developer with a 5-year of freelance and independent practice, fueled by a passion ignited at the age of 12. I am currently studying Computer Science and working on an Unreal Engine 5 Multiplayer project. Seeking a part-time position in the game development industry."
     section: about
 
   clients:
@@ -68,7 +68,7 @@ en: &DEFAULT_EN
     people:
 
   contact:
-    title: "Contact Us"
+    title: "Contact Me"
     text: "Lorem ipsum or call 123456789"
     section: contact
     name: "Name*"
