@@ -17,7 +17,7 @@ en: &DEFAULT_EN
     buttonlink: "#services"
 
   services:
-    title: ""
+    title: "a"
     text: ""
     section: services
 
