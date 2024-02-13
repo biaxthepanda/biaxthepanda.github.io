@@ -33,8 +33,6 @@ en: &DEFAULT_EN
     section: timeline
     # left is the default
     #start_align: "left"
-    events:
-    end: ""
 
   about:
     title: "About Me"
