@@ -12,7 +12,7 @@
             --bg-card-hover: #27272a;
             --text-main: #f4f4f5;
             --text-muted: #a1a1aa;
-            --accent: #10b981; /* Switched to a cleaner "success" green/cyan for a game dev vibe */
+            --accent: #10b981; 
             --accent-hover: #34d399;
             --border: #27272a;
         }
@@ -152,7 +152,7 @@
             gap: 1.5rem;
         }
 
-        /* Experience & Projects */
+        /* Experience */
         .card {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -265,7 +265,6 @@
             <div style="font-weight: 800; color: #fff; font-size: 1.2rem; letter-spacing: 1px;">BIAX.</div>
             <div class="nav-links">
                 <a href="#experience">Experience</a>
-                <a href="#projects">Work</a>
                 <a href="#jams">Jams</a>
             </div>
         </nav>
@@ -288,6 +287,35 @@
             
             <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                 
+                <div class="card" style="border-color: var(--accent);">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3 style="font-size: 1.6rem;">Treasure Hunters: Raid Together</h3>
+                            <h4>Game Developer & Programmer</h4>
+                        </div>
+                        <span class="meta-tag" style="background: var(--accent); color: #000; font-weight: 600; border: none;">2023 - 2026</span>
+                    </div>
+                    
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        A fully shipped multiplayer procedural dungeon crawler built entirely independently in UE5. 
+                        <a href="https://store.steampowered.com/app/2835460/" target="_blank" style="font-weight: 600; text-decoration: underline;">View on Steam Store →</a>
+                    </p>
+
+                    <div class="tech-stack">
+                        <span class="tech">Unreal Engine 5</span>
+                        <span class="tech">C++ & Blueprints</span>
+                        <span class="tech">Multiplayer Replication</span>
+                        <span class="tech">Microsoft PIX</span>
+                        <span class="tech">Steamworks</span>
+                    </div>
+
+                    <ul class="bullet-list">
+                        <li><strong>Network Engineering:</strong> Developed large-scale multiplayer systems independently, successfully reducing network bandwidth from 19 kb/s to 9 kb/s by utilizing the UE Network Profiler.</li>
+                        <li><strong>Performance Optimization:</strong> Optimized GPU and CPU rendering pipelines using Microsoft PIX and Unreal Insights, delivering a 150% performance increase and securing 240 FPS for mid-range PC configurations.</li>
+                        <li><strong>Pipeline Mastery:</strong> Executed the full Unreal Engine pipeline, including gameplay systems, AI, animation, IK, procedural generation, and asset integration workflows.</li>
+                    </ul>
+                </div>
+
                 <div class="card">
                     <div class="card-header">
                         <div class="card-title">
@@ -319,39 +347,6 @@
                     </ul>
                 </div>
 
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2 class="section-title">Featured Project</h2>
-            
-            <div class="card" style="border-color: var(--accent);">
-                <div class="card-header">
-                    <div class="card-title">
-                        <h3 style="font-size: 1.8rem;">Treasure Hunters: Raid Together</h3>
-                        <h4>Solo Developer & Programmer</h4>
-                    </div>
-                    <span class="meta-tag" style="background: var(--accent); color: #000; font-weight: 600; border: none;">Shipped on Steam</span>
-                </div>
-                
-                <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                    A fully shipped multiplayer procedural dungeon crawler built entirely independently in UE5. 
-                    <a href="https://store.steampowered.com/app/2835460/" target="_blank" style="font-weight: 600; text-decoration: underline;">View on Steam Store →</a>
-                </p>
-
-                <div class="tech-stack">
-                    <span class="tech">Unreal Engine 5</span>
-                    <span class="tech">C++ & Blueprints</span>
-                    <span class="tech">Multiplayer Replication</span>
-                    <span class="tech">Microsoft PIX</span>
-                    <span class="tech">Steamworks</span>
-                </div>
-
-                <ul class="bullet-list">
-                    <li><strong>Network Engineering:</strong> Developed large-scale multiplayer systems independently, successfully reducing network bandwidth from 19 kb/s to 9 kb/s by utilizing the UE Network Profiler.</li>
-                    <li><strong>Performance Optimization:</strong> Optimized GPU and CPU rendering pipelines using Microsoft PIX and Unreal Insights, delivering a 150% performance increase and securing 240 FPS for mid-range PC configurations.</li>
-                    <li><strong>Pipeline Mastery:</strong> Executed the full Unreal Engine pipeline, including gameplay systems, AI, animation, IK, procedural generation, and asset integration workflows.</li>
-                </ul>
             </div>
         </section>
 
@@ -435,7 +430,7 @@
                 <div>
                     <h3 style="margin-bottom: 1rem; color: var(--accent);">Education & Leadership</h3>
                     <ul class="bullet-list">
-                        <li><strong>Ankara University:</strong> Computer Engineering (2020-2024)</li>
+                        <li><strong>Ankara University:</strong> Computer Engineering (2020-2025)</li>
                         <li><strong>Universidad de Jaén:</strong> Computer Science, Erasmus+ (2023)</li>
                         <li><strong>VP, Video Games Club:</strong> Ankara University (2022-2024)</li>
                     </ul>
