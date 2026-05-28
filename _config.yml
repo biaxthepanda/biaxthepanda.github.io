@@ -14,13 +14,13 @@
 #theme: jekyll-agency
 remote_theme: raviriley/agency-jekyll-theme
 
-url    : "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/agency-jekyll-theme-starter" # the subpath of your site, e.g. /blog
+url    : "https://biaxthepanda.github.io" # the base hostname & protocol for your site
+baseurl: "" # Keep this empty for user/org sites like username.github.io
 
-title      : Agency Jekyll Theme Demo
-email      : your-email@example.com #this is also the email contact forms will go to
-description: "Agency Bootstrap theme converted to a Jekyll theme, plus new features: Google Analytics, Markdown support, custom pages, and more!"
-author     : Your Name
+title      : İkbal "Biax" Gündoğmuş | Gameplay Programmer
+email      : your.actual.email@example.com # Replace this so the contact form works
+description: "Computer Science graduate and Solo Developer with a passion for Unreal Engine 5, multiplayer architecture, and robust C++ systems."
+author     : İkbal Gündoğmuş
 # logo:     #optional, defaults to site title
   # path: assets\img\clients\creative-market.jpg
   # height: 60 #height in px, defaults to 52px
