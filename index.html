@@ -226,21 +226,36 @@
             color: var(--accent);
         }
 
-        /* Small Cards (Game Jams) */
+        /* Small Cards (Game Jams with Images) */
         .small-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 1.5rem;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s;
+            overflow: hidden; /* This keeps the images inside the rounded corners */
+            transition: transform 0.2s, border-color 0.2s;
         }
 
         .small-card:hover {
             transform: translateY(-4px);
             border-color: var(--accent);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border);
+            background-color: var(--bg-dark); /* Fallback color before image loads */
+        }
+
+        .small-card-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
         }
 
         /* Footer */
@@ -262,7 +277,7 @@
 
     <div class="container">
         <nav>
-            <div style="font-weight: 800; color: #fff; font-size: 1.2rem; letter-spacing: 1px;">BIAX.</div>
+            <div style="font-weight: 800; color: #fff; font-size: 1.2rem; letter-spacing: 1px;">BIAX</div>
             <div class="nav-links">
                 <a href="#experience">Experience</a>
                 <a href="#jams">Jams</a>
@@ -272,7 +287,7 @@
         <header class="hero">
             <h1>İkbal "Biax" Gündoğmuş</h1>
             <h2>Gameplay Programmer & Game Developer</h2>
-            <p>Computer Science graduate with 8 years of independent game development experience. I recently shipped a fully realized Unreal Engine 5 multiplayer title, demonstrating my ability to execute across the entire development lifecycle—from robust C++ systems to rigorous performance optimization.</p>
+            <p>Computer Science graduate with eight years of independent game development experience. Recently shipped a fully realized Unreal Engine 5 multiplayer title, demonstrating a proven ability to execute across the entire development lifecycle, from engineering resilient C++ systems to deep performance optimization.</p>
             
             <div class="btn-group">
                 <a href="mailto:ikbalgundogmus@gmail.com" class="btn primary">Email Me</a>
@@ -359,51 +374,69 @@
             <p style="color: var(--text-muted); margin-bottom: 2rem;">A selection of award-winning projects created under tight deadlines. I have participated in over a dozen jams, consistently ranking high and refining my rapid-prototyping skills.</p>
             
             <div class="grid-3">
-                <a href="https://biaxthepanda.itch.io" target="_blank" class="small-card">
-                    <div>
-                        <h3 style="margin-bottom: 0.5rem; color: #fff;">Fittest Survivor</h3>
-                        <span class="meta-tag" style="color: var(--accent); border-color: var(--accent);">Ranked #1</span>
-                        <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Hacettepe University Jam (HUJAM). Developed in Unity.</p>
+                <a href="https://merkuruial.itch.io/fittest" target="_blank" class="small-card">
+                    <img src="https://img.itch.zone/aW1nLzgxNzMzOTguanBn/315x250%23c/gBUpfF.jpg" alt="Fittest Survivor Cover" class="card-image">
+                    <div class="small-card-content">
+                        <div>
+                            <h3 style="margin-bottom: 0.5rem; color: #fff;">Fittest Survivor</h3>
+                            <span class="meta-tag" style="color: var(--accent); border-color: var(--accent);">Ranked #1</span>
+                            <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Hacettepe University Jam (HUJAM). Developed in Unity.</p>
+                        </div>
                     </div>
                 </a>
 
-                <a href="https://biaxthepanda.itch.io" target="_blank" class="small-card">
-                    <div>
-                        <h3 style="margin-bottom: 0.5rem; color: #fff;">Vagabond</h3>
-                        <span class="meta-tag" style="color: var(--accent); border-color: var(--accent);">Ranked #3 / 500</span>
-                        <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Magara Jam 4. High-ranking competitive submission.</p>
+                <a href="https://biaxthepanda.itch.io/vagabond" target="_blank" class="small-card">
+                    <img src="https://img.itch.zone/aW1nLzgyMTc4NTEucG5n/315x250%23c/m1N0dh.png" alt="Vagabond Cover" class="card-image">
+                    <div class="small-card-content">
+                        <div>
+                            <h3 style="margin-bottom: 0.5rem; color: #fff;">Vagabond</h3>
+                            <span class="meta-tag" style="color: var(--accent); border-color: var(--accent);">Ranked #3 / 500</span>
+                            <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Magara Jam 4. High-ranking competitive submission.</p>
+                        </div>
                     </div>
                 </a>
 
-                <a href="https://biaxthepanda.itch.io" target="_blank" class="small-card">
-                    <div>
-                        <h3 style="margin-bottom: 0.5rem; color: #fff;">The Answer</h3>
-                        <span class="meta-tag">Unreal Engine 5</span>
-                        <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Official submission for the Epic MegaJam 2022.</p>
+                <a href="https://biaxthepanda.itch.io/the-answer" target="_blank" class="small-card">
+                    <img src="https://img.itch.zone/aW1nLzk5NDM4MDkuanBn/315x250%23c/guQnB3.jpg" alt="The Answer Cover" class="card-image">
+                    <div class="small-card-content">
+                        <div>
+                            <h3 style="margin-bottom: 0.5rem; color: #fff;">The Answer</h3>
+                            <span class="meta-tag">Unreal Engine 5</span>
+                            <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Official submission for the Epic MegaJam 2022.</p>
+                        </div>
                     </div>
                 </a>
 
-                <a href="https://biaxthepanda.itch.io" target="_blank" class="small-card">
-                    <div>
-                        <h3 style="margin-bottom: 0.5rem; color: #fff;">The Last Session</h3>
-                        <span class="meta-tag">Ranked #6</span>
-                        <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Magara Jam 5. Developed in Unity.</p>
+                <a href="https://crosline.itch.io/the-last-session" target="_blank" class="small-card">
+                    <img src="https://img.itch.zone/aW1nLzEwMDY1ODg4LnBuZw==/315x250%23c/YUNX6v.png" alt="The Last Session Cover" class="card-image">
+                    <div class="small-card-content">
+                        <div>
+                            <h3 style="margin-bottom: 0.5rem; color: #fff;">The Last Session</h3>
+                            <span class="meta-tag">Ranked #6</span>
+                            <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Magara Jam 5. Developed in Unity.</p>
+                        </div>
                     </div>
                 </a>
                 
-                <a href="https://biaxthepanda.itch.io" target="_blank" class="small-card">
-                    <div>
-                        <h3 style="margin-bottom: 0.5rem; color: #fff;">The Caretaker</h3>
-                        <span class="meta-tag">Top 20 Finish</span>
-                        <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Magara Jam 5. Strong performance in a large participant pool.</p>
+                <a href="https://crosline.itch.io/the-caretaker" target="_blank" class="small-card">
+                    <img src="https://img.itch.zone/aW1nLzIzMzA4ODIzLmpwZWc=/315x250%23c/962WkM.jpeg" alt="The Caretaker Cover" class="card-image">
+                    <div class="small-card-content">
+                        <div>
+                            <h3 style="margin-bottom: 0.5rem; color: #fff;">The Caretaker</h3>
+                            <span class="meta-tag">Top 20 Finish</span>
+                            <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Magara Jam 5. Strong performance in a large participant pool.</p>
+                        </div>
                     </div>
                 </a>
 
-                <a href="https://biaxthepanda.itch.io" target="_blank" class="small-card">
-                    <div>
-                        <h3 style="margin-bottom: 0.5rem; color: #fff;">Various Prototypes</h3>
-                        <span class="meta-tag">Unity & UE4</span>
-                        <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Submissions spanning Global Game Jams, Senscape Jam, and Stay Safe Jam.</p>
+                <a href="https://biaxthepanda.itch.io/the-mystery-of-the-pelican-village" target="_blank" class="small-card">
+                    <img src="https://img.itch.zone/aW1nLzc2NTQ3MzkuanBn/315x250%23c/td7c4l.jpg" alt="Pelican Village Cover" class="card-image">
+                    <div class="small-card-content">
+                        <div>
+                            <h3 style="margin-bottom: 0.5rem; color: #fff;">Mystery of the Pelican Village</h3>
+                            <span class="meta-tag">Senscape Jam 2021</span>
+                            <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">A short adventure built independently in 14 days.</p>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -430,7 +463,7 @@
                 <div>
                     <h3 style="margin-bottom: 1rem; color: var(--accent);">Education & Leadership</h3>
                     <ul class="bullet-list">
-                        <li><strong>Ankara University:</strong> Computer Engineering (2020-2025)</li>
+                        <li><strong>Ankara University:</strong> Computer Engineering (2020-2024)</li>
                         <li><strong>Universidad de Jaén:</strong> Computer Science, Erasmus+ (2023)</li>
                         <li><strong>VP, Video Games Club:</strong> Ankara University (2022-2024)</li>
                     </ul>
